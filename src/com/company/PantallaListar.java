@@ -6,8 +6,10 @@ public class PantallaListar {
         Titulo titulo = new Titulo();
         titulo.mostrar("NOTAS GUARDADAS");
 
-        Mensaje mensaje = new Mensaje();
-        mensaje.mostrarInfo("No hay notas guardas");
+        for(Nota nota: Main.blocDeNotas.notas){
+            System.out.println(nota.titulo);
+        }
+
     }
 }
 

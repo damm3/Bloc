@@ -5,13 +5,12 @@ import java.util.Scanner;
 
 public class PantallaMenu {
 
-    void mostrar(){
+    boolean mostrar(){
         Titulo titulo = new Titulo();
         titulo.mostrar("BLOC DE NOTAS");    // // titulo = "BLOC DE NOTAS"
 
-        Scanner scanner = new Scanner(System.in);
         Menu menu = new Menu();
-        String[] opciones = {"Crear", "Listar"};
+        String[] opciones = {"Crear", "Listar", "Salir"};
         String opcion = menu.elegirOpcion(opciones);
 
         if ("1".equals(opcion)) {
@@ -20,6 +19,9 @@ public class PantallaMenu {
         } else if("2".equals(opcion)){
             PantallaListar pantallaListar = new PantallaListar();
             pantallaListar.mostrar();
+        } else if("3".equals(opcion)){
+            return false;
         }
+        return true;
     }
 }
