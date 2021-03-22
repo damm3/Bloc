@@ -12,7 +12,7 @@ public class PantallaCrear {
         CampoDeTexto campoDeTexto = new CampoDeTexto();
 
         nota.titulo = campoDeTexto.pedir("Titulo de la nota", true);
-        nota.contenido = campoDeTexto.pedir("Contenido del mensaje", false);
+        nota.contenido = campoDeTexto.pedir("Contenido del mensaje");
 
         Main.blocDeNotas.notas.add(nota);
     }

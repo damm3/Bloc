@@ -2,6 +2,11 @@ package com.company;
 
 public class CampoDeTexto {
 
+
+    String pedir(String prompt) {
+        return pedir(prompt, false);
+    }
+
     String pedir(String prompt, boolean obligatiorio){
         System.out.println("\033[31m" + prompt + ":\033[0m");
 
