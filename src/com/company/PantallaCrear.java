@@ -9,11 +9,10 @@ public class PantallaCrear {
 
         Nota nota = new Nota();
 
-        System.out.println("Titulo del mensaje:");
-        nota.titulo = Main.scanner.nextLine();
+        CampoDeTexto campoDeTexto = new CampoDeTexto();
 
-        System.out.println("Contenido del mensaje:");
-        nota.contenido = Main.scanner.nextLine();
+        nota.titulo = campoDeTexto.pedir("Titulo de la nota", true);
+        nota.contenido = campoDeTexto.pedir("Contenido del mensaje", false);
 
         Main.blocDeNotas.notas.add(nota);
     }
