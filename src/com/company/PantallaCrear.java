@@ -13,6 +13,7 @@ public class PantallaCrear {
 
         nota.titulo = campoDeTexto.pedir("Titulo de la nota", true);
         nota.contenido = campoDeTexto.pedir("Contenido del mensaje");
+        nota.dia = campoDeTexto.pedirNumero("Dia de la nota");
 
         Main.blocDeNotas.notas.add(nota);
     }

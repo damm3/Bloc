@@ -26,4 +26,15 @@ public class CampoDeTexto {
             }
         }
     }
+
+    int pedirNumero(String prompt){
+        while(true) {
+            System.out.println("\033[31m" + prompt + ":\033[0m");
+            try {
+                return Integer.parseInt(Main.scanner.nextLine());
+            } catch (Exception e) {
+                System.out.println("Introduce un numero");
+            }
+        }
+    }
 }
